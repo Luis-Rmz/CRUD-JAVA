@@ -35,20 +35,28 @@
             <table border="0" cellpadding="10">
                 <tr>
                     <td>Product Name:</td>
-                    <td><input class="form-control input-sm" type="text" th:field="*{name}" /></td>
+                    <td><input required class="form-control input-sm" type="text" th:field="*{name}" /></td>
                 </tr>
                 <tr>
                     <td>Brand:</td>
-                    <td><input class="form-control input-sm" type="text" th:field="*{brand}" /></td>
+                    <td><input required class="form-control input-sm" type="text" th:field="*{brand}" /></td>
                 </tr>
                 <tr>
                     <td>Made In:</td>
-                    <td><input class="form-control input-sm" type="text" th:field="*{madein}" /></td>
+                    <td><input required class="form-control input-sm" type="text" th:field="*{madein}" /></td>
                 </tr>
                 <tr>
                     <td>Price:</td>
-                    <td><input class="form-control input-sm" type="text" th:field="*{price}" /></td>
-                </tr>                            
+                    <td><input required class="form-control input-sm" type="text" th:field="*{price}" /></td>
+                </tr>
+                <tr>
+                    <td>Discount:</td>
+                    <td><input required class="form-control input-sm" type="text" th:field="*{discount}" /></td>
+                </tr> 
+                <tr>
+                    <td>Taxes:</td>
+                    <td><input required readonly class="form-control input-sm" type="text" th:value="16" /></td>
+                </tr>                             
                 <tr>
                     <td colspan="2"><button class="btn btn-primary" type="submit">Save</button> </td>
                 </tr>

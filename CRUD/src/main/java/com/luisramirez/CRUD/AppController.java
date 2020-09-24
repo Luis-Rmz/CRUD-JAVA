@@ -20,6 +20,13 @@ public class AppController {
     @RequestMapping("/")
     public String viewHomePage(Model model) {
     	List<Product> listProducts = service.listAll();
+    	listProducts.forEach(item->{
+    		float Total = 0;
+    		float Taxes = (1+ item.getTaxes()/100);
+    		float Discount =  (item.getPrice() * item.getDiscount()/100);
+    		Total = (item.getPrice() - Discount) * Taxes ;
+    		item.setTotal(Total);
+    	});
     	model.addAttribute("listProducts", listProducts);
     	return "index";
     }

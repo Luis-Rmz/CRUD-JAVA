@@ -12,8 +12,15 @@ public class Product {
     private String brand;
     private String madein;
     private float price;
+    private float taxes;
+    private float discount;
+
+
+	private float total;
  
-    protected Product() {
+    
+
+	protected Product() {
     }
  
     @Id
@@ -55,6 +62,30 @@ public class Product {
 
 	public void setPrice(float price) {
 		this.price = price;
+	}
+	
+	public float getTaxes() {
+		return taxes;
+	}
+
+	public void setTaxes(float taxes) {
+		this.taxes = taxes;
+	}
+
+	public float getDiscount() {
+		return discount;
+	}
+
+	public void setDiscount(float discount) {
+		this.discount = discount;
+	}
+	
+    public float getTotal() {
+		return total;
+	}
+
+	public void setTotal(float total) {
+		this.total = total;
 	}
 
 	
